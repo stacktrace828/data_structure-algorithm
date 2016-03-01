@@ -6,11 +6,11 @@ void Insertion_Sort(int A[], int n)
     for (int p = 1; p < n; p++)
     {
         int i, Tmp = A[p];
-        for (i = p - 1; i >= 0 && Tmp < A[i]; i--)
+        for (i = p; i > 0 && Tmp < A[i - 1]; i--)
         {
-            A[i + 1] = A[i];
+            A[i] = A[i - 1];
         }
-        A[i + 1] = Tmp;
+        A[i] = Tmp;
     }
 }
 
